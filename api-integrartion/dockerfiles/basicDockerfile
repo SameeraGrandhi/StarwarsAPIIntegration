@@ -1,0 +1,4 @@
+FROM adoptopenjdk/openjdk11:alpine-jre
+MAINTAINER sameera.grandhi
+COPY target/api-integration-1.0.jar product-server.jar
+ENTRYPOINT ["java","-jar","/product-server.jar"]

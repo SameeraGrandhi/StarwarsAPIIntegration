@@ -6,7 +6,11 @@
 
     <groupId>com.starwars</groupId>
     <artifactId>StarwarsAPIIntegration</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>api-integrartion</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

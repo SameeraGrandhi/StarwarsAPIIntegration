@@ -1,0 +1,15 @@
+version: '2'
+services:
+  starwars-server:
+    container_name: starwars-server
+    build:
+      context: api-integration
+      dockerfile: dockerfiles/basicDockerfile
+    image: starwars:latest
+    ports:
+      - 8080:8080
+    networks:
+      - spring-cloud-network
+networks:
+  spring-cloud-network:
+    driver: bridge
