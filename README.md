@@ -43,8 +43,11 @@ To find details of Planets, Spaceships, Vehicles, People, Films and Species from
 #### Low level design
 The below diagram shows how the interactions are made between each component.
 
-![SequenceDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/docs/images/sequence-diagram.jpg)
-![ClassDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/class-diagram.png)
+![SequenceDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/sequence-diagram.jpg)
+![ClassDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/class-diagram.jpg)
+
+##### Design analysis
+Find the design analysis document to find details in depth [here](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Analysis)
 
 #### Improvements with AWS
 The below diagram illustrates how the current flow can be improvised to include few elements 
