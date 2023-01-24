@@ -94,11 +94,6 @@ The below diagram shows how the interactions are made between each component.
 ##### Design analysis & trade-offs
 Find the design analysis document to find details in depth [here](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Analysis)
 
-#### Improvements with AWS
-The below diagram illustrates how the current flow can be improvised to include few elements 
-like authentication & authorization with AWS Cognito . Using AWS Fargate to deploy services
-API Gateway helps to keep the load under control with rate limiting allowed.
-
 ### Git flow
 
 The below diagram illustrates how the build is triggered and the jenkins pipeline is initiated.
