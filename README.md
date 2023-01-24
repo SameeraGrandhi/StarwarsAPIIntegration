@@ -60,6 +60,8 @@ The below diagram illustrates how the build is triggered and the jenkins pipelin
 
 ![Image](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/gitflow.png)
 
+Note: Currently webhook is not configured as Jenkins server is not available as public 
+
 ### References
 [Starwars Website](https://swapi.dev/)
 
