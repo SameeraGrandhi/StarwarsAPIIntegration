@@ -64,6 +64,8 @@ Note: Currently webhook is not configured as Jenkins server is not available as 
 
 ### References
 
+[Assumptions & Improvements](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Assumptions-and-Improvements)
+
 [Design analysis and choices made](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Analysis)
 
 [Design patterns used in the code](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Patterns)
