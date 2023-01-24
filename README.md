@@ -73,3 +73,5 @@ Note: Currently webhook is not configured as Jenkins server is not available as 
 [Starwars Website](https://swapi.dev/)
 
 [Starwars API Documentation](https://swapi.dev/documentation)
+
+#### NOTE: Please read [wiki](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki) for more details on the implementation
