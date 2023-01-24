@@ -6,7 +6,7 @@ It uses Java, Spring boot for the integration.
 
 To find details of Planets, Spaceships, Vehicles, People, Films and Species from all of star wars movie. End user should be able to view results by changing “type” and “name”. Here “type” could be one of Planets, Spaceships, Vehicles, People, Films and Species and “name” could be name of any of the object in that type e.g. type=Vehicles&name=Sand Crawler;
 
-###Requirements:
+### Requirements:
 
 1. End user should be able to view results by changing the input parameters
 2. The service should be ready to be released to production or live environment
@@ -46,7 +46,7 @@ The below diagram shows how the interactions are made between each component.
 ![SequenceDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/sequence-diagram.jpg)
 ![ClassDiagram](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/blob/main/docs/images/class-diagram.jpg)
 
-##### Design analysis
+##### Design analysis & trade-offs
 Find the design analysis document to find details in depth [here](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Analysis)
 
 #### Improvements with AWS

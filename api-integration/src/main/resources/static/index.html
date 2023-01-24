@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script>
+    async function check()
+    {
+        const type = document.myform.starwars.value
+        const searchValue = document.myform.search.value
+        // const hostUrl = process.env.HOST_URL
+        const hostUrl = "http://localhost:8080"
+        url = `${hostUrl}/api/v1/search?type=${type}&name=${searchValue}`
+        console.log(url)
+        const response = await fetch(url);
+        const result = await response.json();
+        fetch(url)
+            .then(res => {
+                if (res.ok) {
+                    console.log("Success")
+                } else {
+                    console.log("Not Successful")
+                }
+            })
+        document.getElementById('json').innerHTML = JSON.stringify(result,null,4)
+    }
+</script>
+<body>
+<form name="myform">
+    <label for="starwars" class="dropdown">Type:</label>
+    <select name="starwars" id="starwars">
+        <option value="people" selected>People</option>
+        <option value="species">Species</option>
+        <option value="planets">Planets</option>
+        <option value="starships">Starships</option>
+        <option value="vehicles">Vehicles</option>
+        <option value="films" >Films</option>
+    </select>
+    <br>
+    <br>
+    <label for="search">Search:</label>
+    <input type="search" id="search" name="search" placeholder="search here">
+    <br><br>
+    <input type="submit"  onclick="check();return false" value="Submit" />
+    <br><br><br><br>
+    <textarea  name="json" id="json" rows="60" cols="200" disabled="disabled" style="width:100%"></textarea>
+    <br><br>
+</form>
+
+</body>
+</html>

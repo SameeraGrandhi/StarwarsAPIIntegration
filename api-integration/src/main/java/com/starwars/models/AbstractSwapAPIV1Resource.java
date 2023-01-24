@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
+/**
+ * Abstract method to serialize / deserialize the Swap API response objects
+ */
 @Setter
 @Getter
 @NoArgsConstructor

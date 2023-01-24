@@ -23,6 +23,8 @@
         <javax.cache.version>1.1.1</javax.cache.version>
         <ehcache.version>3.8.1</ehcache.version>
         <junit.version>5.9.1</junit.version>
+        <spring.retry.version>1.2.5.RELEASE</spring.retry.version>
+        <resilience4j.version>1.5.0</resilience4j.version>
     </properties>
 
     <dependencies>
@@ -130,6 +132,31 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>${spring.retry.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.mvc.version}</version>
+        </dependency>
+        <!--dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot2</artifactId>
+            <version>${resilience4j.version}</version>
+        </dependency-->
     </dependencies>
 
     <build>

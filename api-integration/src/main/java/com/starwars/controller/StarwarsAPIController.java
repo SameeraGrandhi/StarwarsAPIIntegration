@@ -1,6 +1,10 @@
 package com.starwars.controller;
 
 import com.starwars.criteria.SearchFilter;
+import com.starwars.exceptions.InternalFailureErrorMessages;
+import com.starwars.exceptions.InternalFailureException;
+import com.starwars.exceptions.UserErrorMessages;
+import com.starwars.exceptions.UserException;
 import com.starwars.models.AbstractSwapAPIV1Resource;
 import com.starwars.models.ResourceType;
 import com.starwars.service.StarwarsSearchService;
@@ -47,14 +51,18 @@ public class StarwarsAPIController {
         };
         ResourceType resourceType = ResourceType.from(type);
         if(Objects.isNull(resourceType)) {
-            throw new IllegalArgumentException("Invalid resource type provided");
+            throw new UserException(UserErrorMessages.INVALID_RESOURCE_TYPE);
         }
-        return starwarsSearchService.search(resourceType,searchFilter);
+        try {
+            return starwarsSearchService.search(resourceType,searchFilter);
+        }catch (RuntimeException e) {
+            throw new InternalFailureException(InternalFailureErrorMessages.FAILED_TO_RETRIEVE_RESULTS_WITH_FAILURE, e);
+        }
     }
 
     private void validateRequestParameters(String type, String searchText) {
         if(Objects.isNull(type) || Strings.isBlank(searchText)) {
-            throw new IllegalArgumentException("Invalid request parameters");
+            throw new UserException(UserErrorMessages.INVALID_REQUEST_PARAMETERS);
         }
     }
 }

@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
+ * Sample Payload:
  * {
  * 	"title": "A New Hope",
  * 	"episode_id": 4,

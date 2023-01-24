@@ -6,6 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Object represents the search response of the starwars api response
+ * @param <T>
+ */
 @Getter
 @Setter
 @NoArgsConstructor
