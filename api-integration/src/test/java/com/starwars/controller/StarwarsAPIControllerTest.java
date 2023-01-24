@@ -1,6 +1,8 @@
 package com.starwars.controller;
 
 import com.starwars.data.TestDataHolder;
+import com.starwars.exceptions.UserErrorMessages;
+import com.starwars.exceptions.UserException;
 import com.starwars.models.ResourceType;
 import com.starwars.models.SwapAPIPeopleV1Resource;
 import com.starwars.models.SwapAPIPlanetsV1Resource;
@@ -79,9 +81,9 @@ public class StarwarsAPIControllerTest {
     @Test
     public void whenInvalidTypeWithValidSearchString_ThenThrowException(){
 
-        Assertions.assertThrows(IllegalArgumentException.class,()->{
+        Assertions.assertThrows(UserException.class,()->{
             apiController.searchDetails("invalid","r");
-        },"Invalid resource type provided");
+        },UserErrorMessages.INVALID_RESOURCE_TYPE.getErrorMessage());
     }
 
     /**
@@ -91,13 +93,27 @@ public class StarwarsAPIControllerTest {
     @Test
     public void whenInvalidSearchStringIsProvided_ThenThrowException(){
 
-        Assertions.assertThrows(IllegalArgumentException.class,()->{
+        Assertions.assertThrows(UserException.class,()->{
             apiController.searchDetails(ResourceType.STARSHIPS.getType(), "");
-        },"Invalid request parameters");
+        }, UserErrorMessages.INVALID_REQUEST_PARAMETERS.getErrorMessage());
 
-        Assertions.assertThrows(IllegalArgumentException.class,()->{
+        Assertions.assertThrows(UserException.class,()->{
             apiController.searchDetails(ResourceType.FILMS.getType(), null);
-        },"Invalid request parameters");
+        },UserErrorMessages.INVALID_REQUEST_PARAMETERS.getErrorMessage());
+    }
+
+    /**
+     * When - With valid input if search service throws exception for any reason
+     * Then - send 500
+     */
+    @Test()
+    public void whenSearchServiceThrowsException_ThenThrowException(){
+        when(searchService.search(any(),any())).thenThrow(RuntimeException.class);
+
+        Assertions.assertThrows(RuntimeException.class,()->{
+            apiController.searchDetails(ResourceType.FILMS.getType(), "1");
+        });
+
     }
 
 }
