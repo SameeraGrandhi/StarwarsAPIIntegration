@@ -63,6 +63,11 @@ The below diagram illustrates how the build is triggered and the jenkins pipelin
 Note: Currently webhook is not configured as Jenkins server is not available as public 
 
 ### References
+
+[Design analysis and choices made](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Analysis)
+
+[Design patterns used in the code](https://github.com/SameeraGrandhi/StarwarsAPIIntegration/wiki/Design-Patterns)
+
 [Starwars Website](https://swapi.dev/)
 
 [Starwars API Documentation](https://swapi.dev/documentation)
